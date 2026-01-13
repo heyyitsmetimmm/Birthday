@@ -572,3 +572,15 @@ body {
     .cake { transform: scale(0.7); }
     .envelope { transform: scale(0.7); } /* Even smaller envelope */
 }
+
+/* Custom Photo Styling */
+.profile-photo {
+    width: 150px;       /* Controls the size */
+    height: 150px;      /* Controls the size */
+    object-fit: cover;  /* Ensures the face isn't squished */
+    border-radius: 50%; /* Makes it a circle */
+    border: 5px solid white; /* Adds a nice frame */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a shadow */
+    display: block;
+    margin: 0 auto 15px auto; /* Centers it and adds space below */
+}
