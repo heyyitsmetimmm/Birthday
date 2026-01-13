@@ -584,3 +584,17 @@ body {
     display: block;         /* Allows centering */
     margin: 0 auto 15px auto; /* Centers the photo horizontally and adds space below */
 }
+
+/* Fix for cut-off content on Step 4 */
+#step4 {
+    overflow-y: auto !important; /* Forces a scrollbar to appear */
+    -webkit-overflow-scrolling: touch; /* Makes scrolling smooth on iPhones */
+    padding-bottom: 50px; /* Adds space at the bottom so text isn't stuck to the edge */
+}
+
+/* Optional: Shrink the cake slightly to make more room */
+.cake-container {
+    transform: scale(0.8); /* Shrinks cake to 80% size */
+    margin-top: -10px;     /* Pulls the cake up slightly */
+    margin-bottom: -10px;  /* Pulls the bottom text up slightly */
+}
