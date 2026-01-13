@@ -585,16 +585,28 @@ body {
     margin: 0 auto 15px auto; /* Centers the photo horizontally and adds space below */
 }
 
-/* Fix for cut-off content on Step 4 */
-#step4 {
-    overflow-y: auto !important; /* Forces a scrollbar to appear */
-    -webkit-overflow-scrolling: touch; /* Makes scrolling smooth on iPhones */
-    padding-bottom: 50px; /* Adds space at the bottom so text isn't stuck to the edge */
+/* FORCE SCROLLING FIX - VERSION 2 */
+body, html {
+    /* This ensures the main window doesn't trap the content */
+    overflow: visible !important; 
+    height: auto !important; 
 }
 
-/* Optional: Shrink the cake slightly to make more room */
+#step4 {
+    /* This forces the container to respect the screen size and scroll inside it */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Occupy 100% of the screen height */
+    overflow-y: auto !important; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll for iPhone */
+    z-index: 1000; /* Ensure it sits on top of everything */
+    padding-bottom: 100px; /* Extra breathing room at the bottom */
+}
+
+/* Shrink the cake slightly to help fit things better */
 .cake-container {
-    transform: scale(0.8); /* Shrinks cake to 80% size */
-    margin-top: -10px;     /* Pulls the cake up slightly */
-    margin-bottom: -10px;  /* Pulls the bottom text up slightly */
+    transform: scale(0.7); 
+    margin-top: -20px;
 }
