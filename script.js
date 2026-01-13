@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const recipientName = "Ru Xing"; // Customizable Name
-    const messageGreeting = "Happy Birthday"; // Customizable Greeting
+    const messageGreeting = "Happy Birthday!!!"; // Customizable Greeting
 
     // --- Utility Function to Transition Steps ---
     function transitionToStep(targetStepId) {
