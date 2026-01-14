@@ -156,28 +156,6 @@ body {
     z-index: 1;
 }
 
-.envelope-seal {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    
-    /* New Centering Code */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* This adds the heart automatically without editing HTML */
-.envelope-seal::after {
-    content: '❤️';     /* The Emoji */
-    font-size: 32px;   /* Size of the heart */
-    margin-top: 5px;   /* Fine-tuning position */
-}
-
 .envelope-container.open .envelope-flap {
     transform: rotateX(180deg);
 }
